@@ -1,0 +1,2 @@
+import { describe,it,expect } from "vitest";import { render,screen } from "@testing-library/react";import userEvent from "@testing-library/user-event";import { App } from "./App";
+describe("App",()=>{it("checks in a bicycle",async()=>{const user=userEvent.setup();render(<App/>);await user.click(screen.getAllByRole("button",{name:"Check in here"})[0]);await user.type(screen.getByLabelText("Bike tag"),"TAG-1");await user.click(screen.getByRole("button",{name:"Save check-in"}));expect(screen.getByText("Bike: TAG-1")).toBeTruthy();});});
