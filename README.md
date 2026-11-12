@@ -19,3 +19,7 @@ Storage key: `bike-bay:v1`. Schema version: 1. Damaged records are moved to a ti
 
 ## Limitations
 This app is single-browser local storage only and has no authentication or network synchronization.
+
+
+## Development note 2
+Add bay domain model.
